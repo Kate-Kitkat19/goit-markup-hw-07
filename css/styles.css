@@ -60,8 +60,6 @@ ul {
 
 .logo {
   margin-right: 93px;
-
-  color: var(--regular-text-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -69,7 +67,21 @@ ul {
   text-decoration: none;
 }
 
-.logo:visited {
+.logo--light {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--bcg-color);
+}
+
+.logo--light:visited {
+  color: var(--bcg-color);
+}
+
+.logo--dark {
+  color: var(--regular-text-color);
+}
+
+.logo--dark:visited {
   color: var(--regular-text-color);
 }
 
@@ -138,8 +150,8 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: var(--standard-margin);
+.contacts__item--row:not(:last-child) {
+  margin-right: 30px;
 }
 
 .contacts__item .icon {
@@ -386,15 +398,16 @@ ul {
   margin-bottom: 30px;
 }
 
-.soc-links-item {
+.socials__item {
   width: 44px;
   height: 44px;
 }
 
-.soc-links-item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
 }
-.soc-link {
+
+.socials__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -403,15 +416,23 @@ ul {
   height: 100%;
   border-radius: 50%;
 
-  color: var(--links-color);
   transition: background-color 250ms var(--typical-timing-function),
     color 250ms var(--typical-timing-function);
 }
 
-.soc-link:hover,
-.soc-link:focus {
+.socials__link:hover,
+.socials__link:focus {
   background-color: var(--accent-color);
   color: var(--bcg-color);
+}
+
+.socials__link--grey {
+  color: var(--links-color);
+}
+
+.socials__link--light {
+  color: var(--bcg-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .icon {
@@ -453,28 +474,31 @@ ul {
 }
 
 /* FOOTER */
-.footer-main {
+.footer {
   background-color: var(--dark-bcg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-main .container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-info {
+.footer-body {
   margin-right: 70px;
 }
 
-.footer-main .logo {
+.footer__contacts {
+  margin-left: 0;
   display: inline-block;
-  margin-bottom: 20px;
-  color: var(--bcg-color);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
-.contacts__email--transparent, .contacts__phone--transparent
- {
+.contacts__email--transparent,
+.contacts__phone--transparent {
   display: inline-block;
   color: var(--bcg-color);
   opacity: 0.6;
@@ -484,14 +508,11 @@ ul {
   line-height: 1.71;
 }
 
-.address {
-  margin-bottom: 9px;
+.contacts__address {
   color: var(--bcg-color);
-  font-style: normal;
-  line-height: 1.71;
 }
 
-.mail-item {
+.contacts__item--column:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -503,7 +524,8 @@ ul {
   opacity: 1;
 }
 
-.footer-cta {
+.socials__cta,
+.subscription__cta {
   display: inline-block;
   margin-bottom: 20px;
   font-size: inherit;
@@ -512,30 +534,22 @@ ul {
   text-transform: uppercase;
   color: var(--bcg-color);
 }
-.footer-social-list {
-  display: flex;
-}
-.footer-icons .soc-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--bcg-color);
-}
 
-.footer-icons .soc-link:hover,
-.footer-icons .soc-link:focus {
-  background-color: var(--accent-color);
+.socials__list {
+  display: flex;
 }
 
 .subscription {
   margin-left: auto;
 }
 
-.subscribe-form {
+.subscription__form {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.form-email-input {
+.subscription__email-input {
   display: block;
   width: 358px;
   height: 50px;
@@ -550,7 +564,13 @@ ul {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-btn {
+.subscription__email-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription__button {
   display: inline-flex;
   align-items: center;
   margin-left: 12px;
@@ -573,20 +593,14 @@ ul {
   transition: background-color 250ms var(--typical-timing-function);
 }
 
-.subscribe-btn:hover,
-.subscribe-btn:focus,
+.subscription__button:hover,
+.subscription__button:focus,
 .send-btn:hover,
 .send-btn:focus {
   background-color: var(--btn-hover-color);
 }
 
-.form-email-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.icon.send {
+.icon--after {
   margin-left: 10px;
 }
 
