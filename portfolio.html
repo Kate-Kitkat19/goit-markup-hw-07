@@ -25,28 +25,25 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
+          <a href="./index.html" class="logo logo--dark"><span class="logo__accent">Web</span>Studio</a>
           <ul class="nav-menu list">
             <li class="nav-menu__item">
               <a href="./index.html" class="nav-menu__link">Студия</a>
             </li>
-            <li class="nav-menu__item">
-              <a href="./portfolio.html" class="nav-menu__link nav-menu__link--current">Портфолио</a>
-            </li>
+            <li class="nav-menu__item"><a href="./portfolio.html" class="nav-menu__link nav-menu__link--current">Портфолио</a></li>
             <li class="nav-menu__item"><a href="" class="nav-menu__link">Контакты</a></li>
           </ul>
         </nav>
-
+    
         <ul class="contacts list">
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--row">
             <a href="mailto:info@devstudio.com" class="contacts__email">
               <svg width="16" height="12" class="icon">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              info@devstudio.com</a
-            >
+              info@devstudio.com</a>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--row">
             <a href="tel:+380961111111" class="contacts__phone">
               <svg width="10" height="16" class="icon">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -61,25 +58,25 @@
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Наши работы</h1>
-          <ul class="filters list">
-            <li class="btn"><button type="button" class="btn-filters">Все</button></li>
-            <li class="btn"><button type="button" class="btn-filters">Веб-сайты</button></li>
-            <li class="btn"><button type="button" class="btn-filters">Приложения</button></li>
-            <li class="btn"><button type="button" class="btn-filters">Дизайн</button></li>
-            <li class="btn"><button type="button" class="btn-filters">Маркетинг</button></li>
+          <ul class="buttons-set list">
+            <li class="buttons-set__item"><button type="button" class="button button--grey">Все</button></li>
+            <li class="buttons-set__item"><button type="button" class="button button--grey">Веб-сайты</button></li>
+            <li class="buttons-set__item"><button type="button" class="button button--grey">Приложения</button></li>
+            <li class="buttons-set__item"><button type="button" class="button button--grey">Дизайн</button></li>
+            <li class="buttons-set__item"><button type="button" class="button button--grey">Маркетинг</button></li>
           </ul>
 
           <ul class="works-catalog list">
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/screen.jpg"
                     alt="экран ноутбука с фото"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -95,16 +92,16 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/bascetball.jpg"
                     alt="двое мужчин играют в баскетбол"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -120,16 +117,16 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/seafood.jpg"
                     alt="лого ресторана морепродуктов"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -146,11 +143,11 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
-                  <img src="./images/headphones.jpg" alt="наушники" width="370" class="works-img" />
-                  <div class="overlay">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
+                  <img src="./images/headphones.jpg" alt="наушники" width="370" class="product__img" />
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -167,11 +164,11 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
-                  <img src="./images/boxes.jpg" alt="две коробки" width="370" class="works-img" />
-                  <div class="overlay">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
+                  <img src="./images/boxes.jpg" alt="две коробки" width="370" class="product__img" />
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -188,16 +185,16 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/comp.jpg"
                     alt="экран компьютера"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -214,11 +211,11 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
-                  <img src="./images/magazine.jpg" alt="журнал" width="370" class="works-img" />
-                  <div class="overlay">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
+                  <img src="./images/magazine.jpg" alt="журнал" width="370" class="product__img" />
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -235,16 +232,16 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/labtag.jpg"
                     alt="бирка с текстом"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -261,16 +258,16 @@
                 </div>
               </a>
             </li>
-            <li class="works-item">
-              <a href="" class="works-link">
-                <div class="product-thumb">
+            <li class="works-catalog__item">
+              <a href="" class="works-catalog__link">
+                <div class="product">
                   <img
                     src="./images/growingbusiness.jpg"
                     alt="человек печатает на макбуке"
                     width="370"
-                    class="works-img"
+                    class="product__img"
                   />
-                  <div class="overlay">
+                  <div class="product__overlay">
                     <div class="overlay-text-wrap">
                       <p class="overlay-text">
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
