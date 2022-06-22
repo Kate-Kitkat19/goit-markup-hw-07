@@ -202,7 +202,7 @@ ul {
   background-size: cover;
 }
 
-.main-heading {
+.main-title {
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -216,7 +216,7 @@ ul {
   color: var(--bcg-color);
 }
 
-.main-btn {
+.hero-btn {
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -239,8 +239,8 @@ ul {
     box-shadow 250ms var(--typical-timing-function);
 }
 
-.main-btn:hover,
-.main-btn:focus {
+.hero-btn:hover,
+.hero-btn:focus {
   background-color: var(--btn-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -257,20 +257,22 @@ ul {
   clip-path: inset(50%);
   margin: -1px;
 }
-.benefits {
+
+.benefits__list {
   display: flex;
 }
 
-.benefits-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-.benefits-list-item {
+.benefits__item {
   display: flex;
   flex-direction: column;
   flex-basis: calc((100%-120px) / 4);
 }
 
-.benefits-icon-wrap {
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.benefits__icon-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,45 +283,42 @@ ul {
   border-radius: 4px;
 }
 
-.benefits-item {
+.benefits__subtitle {
   margin-bottom: 10px;
   font-size: inherit;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
-.benefits-text {
+.benefits__text {
   color: var(--text-color-secondary);
   text-transform: none;
   line-height: 1.7;
 }
-.our-works.section {
+
+.services__section {
   padding-top: 0;
 }
 
-.work-list {
+.services__list {
   display: flex;
   align-items: center;
 }
 
-.work-items {
+.services__item {
   margin-right: 30px;
   flex-basis: calc((100% - 90px) / 3);
 }
-.work-items:last-child {
+.services__item:last-child {
   margin-right: 0;
 }
 
-.work-items .img {
-  display: block;
-}
-
-.overlay-wrap {
+.services__overlay {
   display: block;
   position: relative;
 }
 
-.overlay-wrap::before {
+.services__overlay::before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -330,7 +329,11 @@ ul {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.works-text-wrap {
+.services__img {
+  display: block;
+}
+
+.services__text-wrap {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -341,7 +344,7 @@ ul {
   align-items: center;
 }
 
-.works-overlay-text {
+.services__text {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -358,12 +361,12 @@ ul {
   background-color: var(--bcg-color-secondary);
 }
 
-.team-list {
+.team__list {
   display: flex;
   margin-right: -30px;
 }
 
-.team-member {
+.team__item {
   background-color: var(--bcg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -372,12 +375,12 @@ ul {
   flex-basis: calc((100% - 120px) / 4);
 }
 
-.member-photo {
+.team__member-photo {
   display: block;
   margin-bottom: 30px;
 }
 
-.member-name {
+.team__member-name {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -385,14 +388,15 @@ ul {
   text-align: center;
 }
 
-.member-position {
+.team__member-position {
   margin-bottom: 16px;
   color: var(--text-color-secondary);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
-.social-links {
+
+.team__socials {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -439,22 +443,22 @@ ul {
   fill: currentColor;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.clients-item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
 
-.clients-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-link {
+.clients__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -467,8 +471,8 @@ ul {
     border-color 250ms var(--typical-timing-function);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -484,7 +488,7 @@ ul {
   align-items: baseline;
 }
 
-.footer-body {
+.footer__body {
   margin-right: 70px;
 }
 
