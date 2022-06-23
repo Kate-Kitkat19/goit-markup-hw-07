@@ -1,7 +1,13 @@
 @import 'base/normalize';
-@import 'utils/vars';
 @import 'base/shared-styles';
-@import 'utils/visually-hidden'
+
+@import 'utils/vars';
+@import 'utils/visually-hidden';
+@import 'utils/container';
+@import 'utils/section';
+@import 'utils/placeholders';
+
+@import 'layout/header';
 
 
 // оптимізувати стилі для кнопок!

@@ -2,8 +2,8 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-  background-color: $bcg-color;
-  color: $main-text-color;
+  background-color: var(--bcg-color);
+  color: var(--main-text-color);
 }
 
 p,
