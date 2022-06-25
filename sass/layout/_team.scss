@@ -3,7 +3,6 @@
 }
 
 .team__list {
-  @extend %list;
   display: flex;
   margin-right: -30px;
 }

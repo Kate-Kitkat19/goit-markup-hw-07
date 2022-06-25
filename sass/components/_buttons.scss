@@ -134,3 +134,13 @@
 
   transition: background-color 250ms var(--typical-timing-function);
 }
+
+.buttons-set {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
