@@ -1,8 +1,30 @@
-.subscription__button {
-  @extend %button;
-  margin-left: 12px;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: var(--accent-color);
+  color: var(--bcg-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  @include transition();
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-color);
+  }
+}
+
+.subscription__button {
+  @extend .button;
+  margin-left: 12px;
   padding-left: 28px;
   padding-right: 28px;
 
@@ -10,103 +32,66 @@
 }
 
 .button--grey {
-  @extend %button;
-
+  @extend .button;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
-
   color: inherit;
   background-color: var(--bcg-color-secondary);
 
   font-family: inherit;
   font-weight: 500;
   line-height: 1.62;
-
-  @include transition (color background-color box-shadow);
-}
-
-.button--grey:hover,
-.button--grey:focus {
-  background-color: var(--accent-color);
-  color: var(--bcg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  @include transition(background-color, color, box-shadow);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--bcg-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .hero-btn {
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  @extend .button;
   padding-left: 32px;
   padding-right: 32px;
-  text-align: center;
-  background-color: var(--accent-color);
-  color: var(--bcg-color);
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
 
-  cursor: pointer;
-  border-radius: 4px;
+  @include transition(background-color, box-shadow);
 
-  transition: background-color 250ms var(--typical-timing-function),
-    box-shadow 250ms var(--typical-timing-function);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
-  background-color: var(--btn-hover-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .close-btn {
+  @extend .button;
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
   background-color: var(--bcg-color);
   color: var(--regular-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  @include transition(color, box-shadow);
 
-  cursor: pointer;
-  transition: color 250ms var(--typical-timing-function),
-    box-shadow 250ms var(--typical-timing-function);
-}
-
-.close-btn:hover {
-  color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &:hover {
+    color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .send-btn {
-  display: block;
-  text-align: center;
+  @extend .button;
   width: 200px;
   height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 28px;
   padding-right: 28px;
-
-  background-color: var(--accent-color);
-  color: var(--bcg-color);
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 
 .buttons-set {

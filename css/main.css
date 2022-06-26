@@ -343,27 +343,6 @@ ul {
   font-style: normal;
 }
 
-.button--grey, .subscription__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: var(--accent-color);
-  color: var(--bcg-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--typical-timing-function);
-}
-.button--grey:hover, .subscription__button:hover, .button--grey:focus, .subscription__button:focus {
-  background-color: var(--btn-hover-color);
-}
-
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -806,10 +785,31 @@ ul {
   fill: var(--bcg-color);
 }
 
-.subscription__button {
-  margin-left: 12px;
+.button, .close-btn, .hero-btn, .button--grey, .subscription__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--bcg-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--typical-timing-function);
+}
+.button:hover, .close-btn:hover, .hero-btn:hover, .button--grey:hover, .subscription__button:hover, .button:focus, .close-btn:focus, .hero-btn:focus, .button--grey:focus, .subscription__button:focus {
+  background-color: var(--btn-hover-color);
+}
+
+.subscription__button {
+  margin-left: 12px;
   padding-left: 28px;
   padding-right: 28px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -825,40 +825,20 @@ ul {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.62;
-  transition-property: color background-color box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: var(--typical-timing-function);
+  transition: background-color 250ms var(--typical-timing-function), color 250ms var(--typical-timing-function), box-shadow 250ms var(--typical-timing-function);
 }
-
-.button--grey:hover,
-.button--grey:focus {
+.button--grey:hover, .button--grey:focus {
   background-color: var(--accent-color);
   color: var(--bcg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero-btn {
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 32px;
   padding-right: 32px;
-  text-align: center;
-  background-color: var(--accent-color);
-  color: var(--bcg-color);
-  border: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  border-radius: 4px;
   transition: background-color 250ms var(--typical-timing-function), box-shadow 250ms var(--typical-timing-function);
 }
-
-.hero-btn:hover,
-.hero-btn:focus {
-  background-color: var(--btn-hover-color);
+.hero-btn:hover, .hero-btn:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -866,16 +846,12 @@ ul {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
   background-color: var(--bcg-color);
   color: var(--regular-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  cursor: pointer;
   transition: color 250ms var(--typical-timing-function), box-shadow 250ms var(--typical-timing-function);
 }
 
