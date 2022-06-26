@@ -23,7 +23,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
   color: inherit;
-  transition: color 250ms var(--typical-timing-function);
+  @include transition(color);
 
   &:visited {
     color: inherit;

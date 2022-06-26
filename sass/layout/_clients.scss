@@ -22,8 +22,7 @@
   border: 1px solid var(--links-color);
   border-radius: 4px;
   color: var(--links-color);
-  transition: color 250ms var(--typical-timing-function),
-    border-color 250ms var(--typical-timing-function);
+  @include transition (color, border-color);
 
   &:hover,
   &:focus {
