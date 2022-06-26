@@ -15,12 +15,12 @@
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
-  transition: color 250ms var(--typical-timing-function);
+  @include transition (color);
 }
 
 .icon-checked {
   fill: transparent;
-  transition: fill 250ms var(--typical-timing-function);
+  @include transition (fill);
 
   .policy__checkbox-original:checked + .policy__custom-chechbox & {
     fill: var(--bcg-color);

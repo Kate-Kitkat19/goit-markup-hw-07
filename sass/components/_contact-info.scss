@@ -3,68 +3,63 @@
   margin-left: auto;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  &__phone,
-  &__email {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 500;
-      color: var(--text-color-secondary);
-      text-decoration: none;
-      transition: color 250ms var(--typical-timing-function),
-        opacity 250ms var(--typical-timing-function);
-    }
 
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+
+  &__address {
+    color: var(--bcg-color);
+  }
 }
 
 .contacts__item--row:not(:last-child) {
   margin-right: 30px;
 }
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
+.contacts__item--column:not(:last-child) {
+  margin-bottom: 9px;
 }
 
+.contacts__phone,
+.contacts__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  @include transition(color, opacity);
 
- .header__contacts {
-   font-weight: 500;
-   color: var(--text-color-secondary);
-   text-decoration: none;
- }
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+    opacity: 1;
+  }
 
- .footer__contacts {
-   margin-left: 0;
-   display: inline-block;
-   font-style: normal;
-   font-weight: 400;
-   line-height: 1.71;
-   letter-spacing: 0.03em;
- }
+  &--transparent {
+    display: inline-block;
+    color: var(--bcg-color);
+    opacity: 0.6;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+  }
+}
 
- .contacts__email--transparent,
- .contacts__phone--transparent {
-   display: inline-block;
-   color: var(--bcg-color);
-   opacity: 0.6;
-   text-decoration: none;
-   font-style: normal;
-   font-weight: 400;
-   line-height: 1.71;
- }
+.header__contacts {
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  text-decoration: none;
+}
 
- .contacts__address {
-   color: var(--bcg-color);
- }
-
- .contacts__item--column:not(:last-child) {
-   margin-bottom: 9px;
- }
-
- .contacts__email:hover,
- .contacts__email:focus,
- .contacts__phone:hover,
- .contacts__phone:focus {
-   color: var(--accent-color);
-   opacity: 1;
- }
+.footer__contacts {
+  margin-left: 0;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
